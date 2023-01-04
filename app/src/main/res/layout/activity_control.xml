@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/textViewInternet"
+            android:layout_width="313dp"
+            android:layout_height="35dp"
+            android:text="Refresh internet stats"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCheckInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Check Internet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnMute"
+            android:layout_width="91dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Mute"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnVolDown" />
+
+        <Button
+            android:id="@+id/btnOne"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMute" />
+
+        <Button
+            android:id="@+id/btnFour"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:text="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDown" />
+
+        <Button
+            android:id="@+id/btnFive"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:text="5"
+            app:layout_constraintStart_toEndOf="@+id/btnFour"
+            app:layout_constraintTop_toTopOf="@+id/btnFour" />
+
+        <Button
+            android:id="@+id/btnSix"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:text="6"
+            app:layout_constraintStart_toEndOf="@+id/btnFive"
+            app:layout_constraintTop_toTopOf="@+id/btnFive" />
+
+        <Button
+            android:id="@+id/btnSeven"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:text="7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFour" />
+
+        <Button
+            android:id="@+id/btnEight"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:text="8"
+            app:layout_constraintStart_toEndOf="@+id/btnSeven"
+            app:layout_constraintTop_toBottomOf="@+id/btnFour" />
+
+        <Button
+            android:id="@+id/btnZero"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:text="0"
+            app:layout_constraintEnd_toEndOf="@+id/btnNine"
+            app:layout_constraintStart_toStartOf="@+id/btnSeven"
+            app:layout_constraintTop_toBottomOf="@+id/btnEight" />
+
+        <Button
+            android:id="@+id/btnNine"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:text="9"
+            app:layout_constraintStart_toEndOf="@+id/btnEight"
+            app:layout_constraintTop_toBottomOf="@+id/btnFive" />
+
+        <Button
+            android:id="@+id/btnThree"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:text="3"
+            app:layout_constraintStart_toEndOf="@+id/btnTwo"
+            app:layout_constraintTop_toTopOf="@+id/btnOne" />
+
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="62dp"
+            android:layout_height="48dp"
+            android:text="Up"
+            app:layout_constraintStart_toEndOf="@+id/btnLeft"
+            app:layout_constraintTop_toBottomOf="@+id/btnTools" />
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="64dp"
+            android:layout_height="47dp"
+            android:text="Left"
+            app:layout_constraintStart_toEndOf="@+id/btnSix"
+            app:layout_constraintTop_toBottomOf="@+id/btnUp" />
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="70dp"
+            android:layout_height="46dp"
+            android:text="Right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btnOkay"
+            app:layout_constraintTop_toTopOf="@+id/btnOkay" />
+
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="71dp"
+            android:layout_height="41dp"
+            android:text="Down"
+            app:layout_constraintStart_toEndOf="@+id/btnLeft"
+            app:layout_constraintTop_toBottomOf="@+id/btnOkay" />
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="Main Menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnConnect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextIP" />
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Connect"
+            app:layout_constraintEnd_toStartOf="@+id/btnSettings"
+            app:layout_constraintTop_toTopOf="@+id/btnMenu" />
+
+        <Button
+            android:id="@+id/btnTwo"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:text="2"
+            app:layout_constraintStart_toEndOf="@+id/btnOne"
+            app:layout_constraintTop_toTopOf="@+id/btnOne" />
+
+        <Button
+            android:id="@+id/btnReturn"
+            android:layout_width="91dp"
+            android:layout_height="55dp"
+            android:text="Return"
+            app:layout_constraintStart_toEndOf="@+id/btnMute"
+            app:layout_constraintTop_toTopOf="@+id/btnMute" />
+
+        <Button
+            android:id="@+id/btnTools"
+            android:layout_width="91dp"
+            android:layout_height="55dp"
+            android:text="Tools"
+            app:layout_constraintStart_toEndOf="@+id/btnReturn"
+            app:layout_constraintTop_toTopOf="@+id/btnReturn" />
+
+        <Button
+            android:id="@+id/btnVolUp"
+            android:layout_width="92dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="16dp"
+            android:text="Volume Up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCheckInternet" />
+
+        <Button
+            android:id="@+id/btnChnUp"
+            android:layout_width="92dp"
+            android:layout_height="57dp"
+            android:text="Channel Up"
+            app:layout_constraintStart_toEndOf="@+id/btnHome"
+            app:layout_constraintTop_toTopOf="@+id/btnHome" />
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="92dp"
+            android:layout_height="57dp"
+            android:text="Home"
+            app:layout_constraintStart_toEndOf="@+id/btnVolUp"
+            app:layout_constraintTop_toTopOf="@+id/btnVolUp" />
+
+        <Button
+            android:id="@+id/btnGuide"
+            android:layout_width="92dp"
+            android:layout_height="57dp"
+            android:text="Guide"
+            app:layout_constraintStart_toEndOf="@+id/btnVolDown"
+            app:layout_constraintTop_toBottomOf="@+id/btnHome" />
+
+        <Button
+            android:id="@+id/btnChnDown"
+            android:layout_width="89dp"
+            android:layout_height="54dp"
+            android:text="Channel Down"
+            app:layout_constraintStart_toEndOf="@+id/btnGuide"
+            app:layout_constraintTop_toBottomOf="@+id/btnChnUp" />
+
+        <Button
+            android:id="@+id/btnVolDown"
+            android:layout_width="91dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="16dp"
+            android:text="Volume Down"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnVolUp" />
+
+        <Button
+            android:id="@+id/btnOkay"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="Okay"
+            app:layout_constraintStart_toEndOf="@+id/btnLeft"
+            app:layout_constraintTop_toTopOf="@+id/btnLeft" />
+
+        <Button
+            android:id="@+id/btnPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POWER"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnMenu" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            app:layout_constraintEnd_toStartOf="@+id/btnPower"
+            app:layout_constraintTop_toTopOf="@+id/btnConnect" />
+
+        <Button
+            android:id="@+id/btnHDMI1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HDMI 1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnZero" />
+
+        <Button
+            android:id="@+id/btnHDMI2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HDMI 2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btnHDMI1"
+            app:layout_constraintTop_toTopOf="@+id/btnHDMI1" />
+
+        <Button
+            android:id="@+id/btnHDMI3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HDMI 3"
+            app:layout_constraintStart_toEndOf="@+id/btnHDMI2"
+            app:layout_constraintTop_toTopOf="@+id/btnHDMI2" />
+
+        <Button
+            android:id="@+id/btnHDMI4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HDMI 4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btnHDMI3"
+            app:layout_constraintTop_toTopOf="@+id/btnHDMI2" />
+
+        <EditText
+            android:id="@+id/editTextIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="39dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:text="IP:"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnHDMI1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
