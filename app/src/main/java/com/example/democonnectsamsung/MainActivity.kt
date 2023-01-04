@@ -8,6 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.democonnectsamsung.databinding.ActivityMainBinding
 import com.example.democonnectsamsung.model.ResponseDevice
+import com.example.democonnectsamsung.model.SamsungRemote
 import com.koushikdutta.async.AsyncServer.LOGTAG
 import com.samsung.multiscreen.*
 
@@ -96,6 +97,7 @@ class MainActivity : AppCompatActivity() {
         }
         application.connect(object : Result<Client> {
             override fun onSuccess(p0: Client?) {
+                SamsungRemote.id = p0?.id
                 Log.e(LOGTAG, "Application connect onSuccess() client: " + p0.toString())
             }
 
@@ -119,6 +121,7 @@ class MainActivity : AppCompatActivity() {
                             override fun onSuccess(client: Client?) {
                                 if (client != null) {
                                     Log.e("log", "onSuccess: $client")
+                                    SamsungRemote.id = client.id
                                 }
                             }
 

@@ -1,5 +1,7 @@
 package com.example.democonnectsamsung.model;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -17,7 +19,8 @@ import java.util.Arrays;
 public class SamsungRemote
 {
 
-    private final int PORT = 55000;
+    private final int PORT = 8002;
+    public static String id = "";
     private final int SO_TIMEOUT = 3 * 1000; // Socket connect and read timeout in milliseconds.
     private final int SO_AUTHENTICATE_TIMEOUT = 300 * 1000; // Socket read timeout while authenticating (waiting for user response) in milliseconds.
     private final String APP_STRING = "iphone.iapp.samsung";
@@ -67,8 +70,8 @@ public class SamsungRemote
 
     public TVReply authenticate(String name) throws IOException {
         String hostAddress = socket.getLocalAddress().getHostAddress();
-
-        return authenticate(hostAddress, hostAddress, name);
+        Log.e("hostAddress", "authenticate: "+hostAddress+" - id: "+id);
+        return authenticate(hostAddress, id, name);
     }
 
 
@@ -258,5 +261,5 @@ public class SamsungRemote
             log("IOException when closing connection: " + e.getMessage());
         }
     }
-    
+
 }

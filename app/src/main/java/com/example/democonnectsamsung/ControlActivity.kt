@@ -14,8 +14,11 @@ import com.example.democonnectsamsung.model.SamsungRemote
 import com.example.democonnectsamsung.model.TVReply
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
-import java.io.IOException
+import java.io.*
 import java.net.InetAddress
+import java.net.InetSocketAddress
+import java.net.Socket
+import java.net.SocketOptions.SO_TIMEOUT
 
 class ControlActivity : AppCompatActivity() {
     lateinit var binding: ActivityControlBinding
@@ -228,23 +231,10 @@ class ControlActivity : AppCompatActivity() {
         }
     }
 
-    var IP = "wss://192.168.1.2:8002/api/v2/"
+    var IP = "192.168.1.2"
 
     @Throws(IOException::class, InterruptedException::class)
     fun ExecuteCommand(message: String?) {
-        try {
-            val address = InetAddress.getByName(IP) // 192 168 0 18
-            val remote = SamsungRemote(address)
-            val reply = remote.authenticate("Samsung Tablet")
-            if (reply == TVReply.ALLOWED) {
-                remote.keycode(message)
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Log.e("--->ExecuteCommand", "ExecuteCommand: ${e.message}")
-        }
-    }
-    fun sendKey(message: String) {
         try {
             val address = InetAddress.getByName(IP) // 192 168 0 18
             val remote = SamsungRemote(address)
